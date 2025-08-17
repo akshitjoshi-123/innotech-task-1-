@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workflow - Signup</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* A light grey background to match Figma */
+        }
+        /* Custom focus ring color */
+        .focus-ring-brand {
+            --tw-ring-opacity: 1;
+            --tw-ring-color: rgb(79 70 229 / var(--tw-ring-opacity));
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div class="bg-white rounded-2xl shadow-xl overflow-hidden w-full max-w-4xl flex flex-col md:flex-row">
+        
+        <!-- Left Side: Signup Form -->
+        <div class="w-full md:w-1/2 p-8 md:p-12">
+            <!-- Logo -->
+            <div class="flex items-center gap-3 mb-8">
+                <div class="bg-indigo-600 p-2 rounded-lg flex-shrink-0">
+                    <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                </div>
+                <span class="text-2xl font-bold text-gray-900">workflow</span>
+            </div>
+
+            <form action="#" method="POST">
+                <!-- Email Input -->
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email address" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                </div>
+
+                <!-- Password Input -->
+                <div class="mb-4">
+                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Password" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                </div>
+
+                <!-- Confirm Password Input -->
+                <div class="mb-4">
+                    <label for="confirm-password" class="block text-sm font-medium text-gray-700">Confirm password</label>
+                    <input type="password" name="confirm-password" id="confirm-password" placeholder="Repeat your password" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                </div>
+
+                <!-- Role Selection -->
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700">Role</label>
+                    <div class="mt-2 flex items-center space-x-4">
+                        <label class="inline-flex items-center"><input type="radio" name="role" value="admin" class="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"> <span class="ml-2 text-gray-700">Admin</span></label>
+                        <label class="inline-flex items-center"><input type="radio" name="role" value="intern" class="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"> <span class="ml-2 text-gray-700">Intern</span></label>
+                        <label class="inline-flex items-center"><input type="radio" name="role" value="user" checked class="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"> <span class="ml-2 text-gray-700">User</span></label>
+                    </div>
+                </div>
+
+                <!-- Terms and Conditions -->
+                <div class="mb-6">
+                    <label class="flex items-start">
+                        <input type="checkbox" name="terms" class="h-5 w-5 mt-0.5 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
+                        <span class="ml-3 text-sm text-gray-600">Accept terms and condition. <a href="#" class="font-medium text-indigo-600 hover:underline">Terms of Service and Privacy Policy</a>.</span>
+                    </label>
+                </div>
+
+                <!-- Signup Button -->
+                <div>
+                    <button type="submit" class="w-full flex justify-center items-center gap-2 py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z" /><path d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z" /></svg>
+                        Signup with Email
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Right Side: Social Login & Support -->
+        <div class="w-full md:w-1/2 bg-gray-50 p-8 md:p-12 flex flex-col justify-center items-center text-center">
+            <div class="w-full max-w-xs">
+                <p class="text-sm text-gray-600">already have an account?</p>
+                <a href="#" class="mt-2 w-full inline-block py-3 px-4 rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700">Login</a>
+
+                <div class="my-8 flex items-center">
+                    <div class="flex-grow border-t border-gray-300"></div>
+                    <span class="flex-shrink mx-4 text-gray-500 text-sm">Or</span>
+                    <div class="flex-grow border-t border-gray-300"></div>
+                </div>
+
+                <p class="text-sm text-gray-600 mb-4">Connect with</p>
+                <div class="flex justify-center space-x-4">
+                    <!-- Google Button -->
+                    <button class="bg-white p-3 border border-gray-300 rounded-full shadow-sm hover:bg-gray-100">
+                        <svg class="w-6 h-6" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"></path><path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691z"></path><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.222 0-9.519-3.356-11.01-7.916l-6.522 5.025C9.505 39.556 16.227 44 24 44z"></path><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-.792 2.237-2.231 4.166-4.087 5.571l6.19 5.238C42.012 36.49 44 30.861 44 24c0-1.341-.138-2.65-.389-3.917z"></path></svg>
+                    </button>
+                    <!-- Facebook Button -->
+                    <button class="bg-white p-3 border border-gray-300 rounded-full shadow-sm hover:bg-gray-100">
+                        <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path></svg>
+                    </button>
+                </div>
+
+                <div class="mt-8">
+                    <p class="text-sm text-gray-600">Having any issues?</p>
+                    <a href="#" class="mt-2 w-full inline-block py-3 px-4 rounded-md shadow-sm text-sm font-medium text-white bg-gray-800 hover:bg-gray-900">Contact Support</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
